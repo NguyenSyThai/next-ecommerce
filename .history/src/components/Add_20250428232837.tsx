@@ -1,0 +1,30 @@
+"use client";
+
+import React, { useState } from "react";
+
+const Add = () => {
+  const [quantity, setQuantity] = useState(0);
+  return (
+    <div className="flex flex-col gap-4">
+      <h4 className="font-medium">Choose a Quantity</h4>
+      <div className="flex justify-between">
+        <div className="">
+          <div className="">
+            <button>-</button>
+            {quantity}
+            <button>+</button>
+          </div>
+        </div>
+        <div className="text-xs">
+          Only <span className="text-orange-500">4 items</span> left! <br />
+          {"Don't"} miss it
+        </div>
+      </div>
+      <button className="w-36 text-sm rounded-3xl ring-1 ring-main text-main py-2 px-4 hover:bg-main hover:text-white disabled:cursor-not-allowed disabled:bg-pink-200 disabled:text-white disabled:right-0">
+        Add to Cart
+      </button>
+    </div>
+  );
+};
+
+export default Add;
