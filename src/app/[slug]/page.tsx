@@ -54,13 +54,13 @@ const SignlePage = async ({ params }: TParams) => {
         <div className="h-[2px] bg-gray-100"></div>
         {product.variants && product.productOptions ? (
           <CustomizeProducts
-            productId={product._id}
+            productId={product._id || ""}
             variants={product.variants}
             productOptions={product.productOptions}
           />
         ) : (
           <Add
-            productId={product._id}
+            productId={product._id || ""}
             variantId={process.env.VARIANT_ID_DEFAULT!}
             stockNumber={product.stock?.quantity || 0}
           />
